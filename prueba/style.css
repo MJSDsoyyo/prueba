@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  background-color: rgb(202, 202, 202);
+  background-image: url(imagenes/minafondo2.jpg);
+  background-size: cover;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  transform-style: preserve-3d;
+  min-height: 80vh;
+  width: 30rem;
+  border-radius: 30px;
+  padding: 0rem 2rem 2rem 2rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    to right,
+    rgba(245, 235, 235, 0.9),
+    rgba(255, 212, 195, 0.9)
+  );
+}
+
+.sneaker {
+  min-height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+.sneaker img {
+  width: 15rem;
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+.circle {
+  width: 15rem;
+  height: 15rem;
+  margin-top: 1em;
+  background: linear-gradient(
+    to right,
+    rgba(194, 231, 245, 0.75),
+    rgba(247, 120, 70, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#developed, #developed2{
+  text-align: center;
+  margin-top: 3em;
+  color:red;
+}
+.info h1 {
+  font-size: 2.1rem;
+  margin-top: 1em;
+  padding-top: 2em;
+  transition: all 0.75s ease-out;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+.info h3 {
+  font-size: 1.3rem;
+  padding: 1rem 0rem;
+  color: #cc0000;
+  font-weight: lighter;
+  transition: all 0.75s ease-out;
+  text-align: center;
+}
+.sizes {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: all 0.75s ease-out;
+}
+.sizes button {
+  padding: 0.5rem 2rem;
+  margin-bottom: 1em;
+  background: none;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background: rgba(247, 120, 70, 0.75);
+}
+
+#gif{
+
+  display: none;
+}
+.sizes .boton:hover{
+  background-color: rgb(101, 104, 101);
+}
+/*Animacion letras*/
+.glitch {
+  font-size: 8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+  animation: glitch 500ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.015em, -0.0125em);
+  /* color: green; */
+  opacity: 0.8;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  /* color: red; */
+  opacity: 0.8;
+}
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+.titulo{
+  transition-property: width;
+  transition-duration: 3s;
+  margin-left: 10%;
+  color: #b11b1b;
+}
+
+
+/*Movil responsive*/
+@media (max-width: 500px) {
+ 
+  body{
+   
+    align-items: flex-start;
+    padding-top: 5em;
+  }
+  .card {
+    transform-style: preserve-3d;
+    min-height: 70vh;
+    width: 19rem;
+  }
+
+  
+  .sneaker {
+    min-height: 15vh;
+    margin-top: 0.5em;
+  }
+  .sneaker img {
+    width: 9rem;
+  }
+  .circle {
+    
+    width: 9em;
+    height: 9em;
+  }
+  .info h1 {
+    font-size: 1.55rem;
+  }
+  .info h3 {
+    font-size: 1rem;
+  }
+  .titulo{
+
+    margin-top: 0.5em;
+    margin-left: 0;
+  }
+  .sizes{
+    display: flex;
+    flex-direction: column;
+  }
+  .sizes button{
+
+    height: 3em;
+  }
+  .sizes button:nth-child(1){
+    margin-top: 1em;
+  }
+  .sizes button:nth-child(n+2){
+    margin-top: 0.5em;
+  }
+ 
+  
+  #developed2{
+
+    font-size: 13px;
+    display: flex;
+
+  }
+
+}
+@media (max-width: 400px) {
+  .card {
+    transform-style: preserve-3d;
+    min-height: 70vh;
+    width: 19rem;
+  }
+  body{
+    align-items:center;
+    padding-top: 0em;
+  }
+  .sneaker {
+    min-height: 15vh;
+   
+  }
+  .sneaker img {
+    width: 7rem;
+  }
+  .circle {
+    
+    width: 7rem;
+    height: 7rem;
+  }
+  .info h1 {
+    font-size: 1.55rem;
+  }
+  .info h3 {
+    font-size: 1rem;
+  }
+  .titulo{
+
+    margin-top: 0.5em;
+    margin-left: 0;
+  }
+  .sizes{
+    display: flex;
+    flex-direction: column;
+  }
+  .sizes button{
+
+    height: 3em;
+    margin-bottom: 0em;
+  }
+  .sizes button:nth-child(1){
+    margin-top: 1em;
+  }
+  .sizes button:nth-child(n+2){
+    margin-top: 0.5em;
+  }
+ 
+  #developed{
+
+    font-size: 13px;
+  }
+ 
+}
